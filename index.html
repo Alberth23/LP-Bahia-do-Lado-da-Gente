@@ -1,0 +1,137 @@
+<link rel="stylesheet" href="govba-bpf.css">
+
+<div id="govba-bpf" class="govba-bpf">
+  <header id="govba-bpf-header" class="govba-bpf-header" role="banner">
+    <div class="govba-bpf-header-inner">
+      <img src="img/header.png" alt="Governo do Estado da Bahia" class="govba-bpf-banner" loading="lazy" decoding="async" />
+    </div>
+  </header>
+
+  <section id="govba-bpf-sec2" class="govba-bpf-sec2" aria-label="Mensagem principal">
+    <div class="govba-bpf-sec2-inner">
+      <h2 class="govba-bpf-title-line govba-bpf-title-block">
+        <span class="govba-bpf-title-yellow">O GOVERNO DO ESTADO TEM UM LADO:</span>
+        <span> O DO POVO BAIANO.</span>
+      </h2>
+
+      <p class="govba-bpf-intro">
+        Nos últimos anos, estamos entregando as escolas públicas mais modernas do Brasil, construindo novas estradas, atraindo novos negócios e construindo a maior rede de policlínicas e hospitais estaduais do país.<br>
+        <strong>Aqui na Bahia é assim: o Governo tá do lado da gente.</strong>
+      </p>
+    </div>
+  </section>
+
+  <section id="govba-bpf-sec3" class="govba-bpf-sec3" aria-label="Resultados em números">
+    <div class="govba-bpf-sec3-inner">
+      <div class="govba-bpf-carousel" data-js="carousel" style="--cards-gap: 16px; --cards-peek: 0px;">
+        <button type="button" class="govba-bpf-carousel-btn prev" data-js="carousel-prev" aria-label="Anterior" aria-controls="govba-bpf-cards">&#x2039;</button>
+        <div class="govba-bpf-carousel-viewport" tabindex="0">
+          <ul id="govba-bpf-cards" class="govba-bpf-cards" role="list">
+            <li class="govba-bpf-card is-pink" role="group" aria-label="Slide 1 de 6">
+              <img src="img/slide01.png" alt="Escolas de tempo integral" class="govba-bpf-card-img" loading="lazy" decoding="async" />
+              <div class="govba-bpf-card-footer"><p class="govba-bpf-card-text">690 escolas de tempo integral.</p></div>
+            </li>
+            <li class="govba-bpf-card is-blue" role="group" aria-label="Slide 2 de 6">
+              <img src="img/slide02.png" alt="26 policlínicas e 38 hospitais" class="govba-bpf-card-img" loading="lazy" decoding="async" />
+              <div class="govba-bpf-card-footer"><p class="govba-bpf-card-text">26 policlínicas e 38 hospitais</p></div>
+            </li>
+            <li class="govba-bpf-card is-purple" role="group" aria-label="Slide 3 de 6">
+              <img src="img/slide03.png" alt="VLT da capital" class="govba-bpf-card-img" loading="lazy" decoding="async" />
+              <div class="govba-bpf-card-footer"><p class="govba-bpf-card-text">VLT DA CAPITAL</p></div>
+            </li>
+            <li class="govba-bpf-card is-green" role="group" aria-label="Slide 4 de 6">
+              <img src="img/slide04.png" alt="1 milhão de pessoas fora do mapa da fome" class="govba-bpf-card-img" loading="lazy" decoding="async" />
+              <div class="govba-bpf-card-footer"><p class="govba-bpf-card-text">1 milhão de pessoas fora do mapa da fome</p></div>
+            </li>
+            <li class="govba-bpf-card is-orange" role="group" aria-label="Slide 5 de 6">
+              <img src="img/slide05.png" alt="Mais de 20 mil km de estradas" class="govba-bpf-card-img" loading="lazy" decoding="async" />
+              <div class="govba-bpf-card-footer"><p class="govba-bpf-card-text">Mais de 20 mil km de estradas</p></div>
+            </li>
+            <li class="govba-bpf-card is-red" role="group" aria-label="Slide 6 de 6">
+              <img src="img/slide06.png" alt="Água para mais de 10 milhões de pessoas" class="govba-bpf-card-img" loading="lazy" decoding="async" />
+              <div class="govba-bpf-card-footer"><p class="govba-bpf-card-text">Água para mais de 10 milhões de pessoas</p></div>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="govba-bpf-carousel-btn next" data-js="carousel-next" aria-label="Próximo" aria-controls="govba-bpf-cards">&#x203A;</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="govba-bpf-banner2" class="govba-bpf-banner2" aria-label="Banner secundário">
+    <div class="govba-bpf-banner2-inner">
+      <img src="img/banner02.png" alt="Banner secundário" class="govba-bpf-banner2-img" loading="lazy" decoding="async" />
+    </div>
+  </section>
+
+  <section id="govba-bpf-video" class="govba-bpf-video" aria-label="Vídeo institucional">
+    <div class="govba-bpf-video-inner">
+      <div class="govba-bpf-video-embed">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5XdOdxN-iY4?si=lx2Py81O7-L1N1e4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  (function () {
+    'use strict';
+    var viewport = document.querySelector('.govba-bpf-carousel-viewport');
+    var track = document.getElementById('govba-bpf-cards');
+    var prev = document.querySelector('[data-js="carousel-prev"]');
+    var next = document.querySelector('[data-js="carousel-next"]');
+    if (!viewport) return;
+
+    function toPx(val){ var n = parseFloat(val||'0'); return isNaN(n) ? 0 : n; }
+    function stepWidth() {
+      var first = track ? track.querySelector('.govba-bpf-card') : null;
+      var cardW = first ? first.getBoundingClientRect().width : viewport.getBoundingClientRect().width/2;
+      var gap = 0;
+      if (track) {
+        var cs = getComputedStyle(track);
+        gap = toPx(cs.gap || cs.columnGap || cs.gridColumnGap);
+      }
+      return cardW + gap;
+    }
+
+    function updateButtons() {
+      var maxScroll = viewport.scrollWidth - viewport.clientWidth;
+      var x = viewport.scrollLeft;
+      if (prev) prev.disabled = x <= 1;
+      if (next) next.disabled = x >= maxScroll - 1;
+    }
+
+    function go(dir) {
+      viewport.scrollBy({ left: dir * stepWidth(), behavior: 'smooth' });
+      setTimeout(updateButtons, 300);
+    }
+
+    if (prev) prev.addEventListener('click', function () { go(-1); });
+    if (next) next.addEventListener('click', function () { go(1); });
+    viewport.addEventListener('scroll', updateButtons, { passive: true });
+    viewport.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
+    });
+    var isDown = false; var startX = 0; var startScroll = 0; var snapTimer = 0;
+    function snapToNearest() {
+      var step = stepWidth();
+      var idx = Math.round(viewport.scrollLeft / step);
+      viewport.scrollTo({ left: idx * step, behavior: 'smooth' });
+      updateButtons();
+    }
+    viewport.addEventListener('pointerdown', function (e) {
+      isDown = true; startX = e.clientX; startScroll = viewport.scrollLeft; viewport.classList.add('is-dragging'); viewport.setPointerCapture(e.pointerId);
+    });
+    viewport.addEventListener('pointermove', function (e) {
+      if (!isDown) return; var dx = e.clientX - startX; viewport.scrollLeft = startScroll - dx;
+    });
+    function endDrag() { if (!isDown) return; isDown = false; viewport.classList.remove('is-dragging'); snapToNearest(); }
+    viewport.addEventListener('pointerup', endDrag);
+    viewport.addEventListener('pointercancel', endDrag);
+    viewport.addEventListener('wheel', function (e) {
+      if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) return; e.preventDefault(); viewport.scrollLeft += e.deltaX; clearTimeout(snapTimer); snapTimer = setTimeout(snapToNearest, 120);
+    }, { passive: false });
+    updateButtons();
+  })();
+</script>

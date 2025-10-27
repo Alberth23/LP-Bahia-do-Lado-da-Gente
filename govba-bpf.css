@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+
+html, body { margin: 0; padding: 0; overflow-x: hidden; background: #000; }
+
+/* Container raiz */
+#govba-bpf {
+  width: 100vw; width: 100dvw;
+  max-width: none;
+  margin-left: calc(50% - 50vw); margin-left: calc(50% - 50dvw);
+  margin-right: calc(50% - 50vw); margin-right: calc(50% - 50dvw);
+  min-height: 100vh;
+  background: #000 url("img/bg.png") center top / cover no-repeat;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+#govba-bpf, #govba-bpf * { box-sizing: border-box; }
+#govba-bpf img { display: block; width: 100%; height: auto; }
+
+/* Header imagem full */
+.govba-bpf-header { margin: 0; padding: 0; }
+.govba-bpf-header-inner { width: 100%; }
+.govba-bpf-banner { width: 100%; height: auto; display: block; }
+
+/* Seção título */
+.govba-bpf-sec2 { text-align: center; color: #fff; padding: 0; }
+.govba-bpf-sec2-inner { width: 100%; }
+.govba-bpf-title-line { margin: 0 0 8px; font-weight: 800; text-transform: uppercase; letter-spacing: .2px; font-size: clamp(28px, 6vw, 64px); }
+.govba-bpf-title-yellow { color: #ffe403; }
+.govba-bpf-title-block { max-width: 760px; line-height: var(--govba-title-line-height, 1.1); margin: 0 auto; display: block; }
+.govba-bpf-intro { max-width: 905px; margin: 20px auto 0; font-size: clamp(16px, 2.2vw, 24px); line-height: 1.6; }
+.govba-bpf-intro strong { font-weight: 700; }
+
+/* Carrossel */
+.govba-bpf-sec3 { padding: 40px 0; }
+.govba-bpf-sec3-inner { width: 100%; }
+.govba-bpf-carousel { position: relative; }
+.govba-bpf-carousel-viewport { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; cursor: grab; padding-left: clamp(16px, 6vw, 80px); padding-right: clamp(16px, 6vw, 80px); scroll-padding-left: clamp(16px, 6vw, 80px); scroll-padding-right: clamp(16px, 6vw, 80px); }
+.govba-bpf-carousel-viewport::-webkit-scrollbar { display: none; }
+.govba-bpf-cards { list-style: none; padding: 0; margin: 0; display: flex; gap: var(--cards-gap, 16px); }
+.govba-bpf-cards::after { content: ""; flex: 0 0 var(--carousel-end-pad, 80px); }
+.govba-bpf-card { flex: 0 0 calc((100% - (var(--cards-gap, 16px) * 3)) / 4); scroll-snap-align: start; background: var(--card-bg, #e61e73); border-radius: 20px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.2); position: relative; }
+.govba-bpf-card-img { border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; }
+.govba-bpf-card-footer { display: flex; justify-content: center; align-items: center; min-height: 48px; border-radius: 0 0 12px 12px; background: var(--card-caption-bg, #c81e66); padding: 12px; }
+.govba-bpf-card-text { margin: 0; color: #fff; text-align: center; font-weight: 600; text-transform: uppercase; letter-spacing: .2px; font-size: 20px; }
+
+/* Paleta dos cards */
+.govba-bpf-card.is-pink { --card-bg: #b6005a; --card-caption-bg: #b6005a; }
+.govba-bpf-card.is-blue { --card-bg: #006bb6; --card-caption-bg: #006bb6; }
+.govba-bpf-card.is-purple { --card-bg: #a005aa; --card-caption-bg: #a005aa; }
+.govba-bpf-card.is-green { --card-bg: #08a128; --card-caption-bg: #08a128; }
+.govba-bpf-card.is-orange { --card-bg: #df7300; --card-caption-bg: #df7300; }
+.govba-bpf-card.is-red { --card-bg: #f51b01; --card-caption-bg: #f51b01; }
+
+/* Botões do carrossel */
+.govba-bpf-carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 56px; height: 56px; border-radius: 50%; border: 2px solid rgba(0,0,0,.15); background: rgba(255,255,255,.92); color: #222; cursor: pointer; display: grid; place-items: center; z-index: 2; box-shadow: 0 6px 18px rgba(0,0,0,.18); transition: background .2s, transform .2s, opacity .2s; }
+.govba-bpf-carousel-btn.prev { left: 8px; }
+.govba-bpf-carousel-btn.next { right: 8px; }
+.govba-bpf-carousel-btn:hover { background: #fff; transform: translateY(-50%) scale(1.03); }
+.govba-bpf-carousel-btn:focus-visible { outline: 3px solid #ffe403; outline-offset: 2px; }
+.govba-bpf-carousel-btn:disabled { opacity: .45; cursor: default; }
+@media (max-width: 640px) { .govba-bpf-carousel-btn { width: 44px; height: 44px; border-width: 1px; } }
+
+/* Responsividade */
+@media (max-width: 599px) {
+  .govba-bpf-card { flex: 0 0 calc(100% - var(--cards-gap, 16px)); }
+  .govba-bpf-carousel-btn.prev { left: 4px; }
+  .govba-bpf-carousel-btn.next { right: 4px; }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .govba-bpf-card { flex: 0 0 calc((100% - var(--cards-gap, 16px)) / 2); }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .govba-bpf-card { flex: 0 0 calc((100% - (var(--cards-gap, 16px) * 2)) / 3); }
+}
+
+/* Banner secundário */
+.govba-bpf-banner2 { margin: 0; padding: 0; }
+.govba-bpf-banner2-inner { width: 100vw; width: 100dvw; margin-left: calc(50% - 50vw); margin-left: calc(50% - 50dvw); margin-right: calc(50% - 50vw); margin-right: calc(50% - 50dvw); }
+.govba-bpf-banner2-img { width: 100%; height: auto; display: block; }
+
+/* Vídeo youtube */
+.govba-bpf-video { margin: 0; padding: clamp(24px, 6vw, 80px) 0; }
+.govba-bpf-video-inner { width: 100vw; width: 100dvw; margin-left: calc(50% - 50vw); margin-left: calc(50% - 50dvw); margin-right: calc(50% - 50vw); margin-right: calc(50% - 50dvw); padding: 0 clamp(16px, 6vw, 80px); }
+.govba-bpf-video-embed { width: 100%; aspect-ratio: 16/9; background: #000; position: relative; border-radius: 30px; overflow: hidden; }
+.govba-bpf-video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
