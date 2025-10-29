@@ -10,7 +10,7 @@ html, body { margin: 0; padding: 0; overflow-x: hidden; background: #000; }
   margin-left: calc(50% - 50vw); margin-left: calc(50% - 50dvw);
   margin-right: calc(50% - 50vw); margin-right: calc(50% - 50dvw);
   min-height: 100vh;
-  background: #000 url("img/bg.png") center top / cover no-repeat;
+  background: #000 url("img/bg.webp") center top / cover no-repeat;
   font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
