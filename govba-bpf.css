@@ -10,7 +10,7 @@ html, body { margin: 0; padding: 0; overflow-x: hidden; background: #000; }
   margin-left: calc(50% - 50vw); margin-left: calc(50% - 50dvw);
   margin-right: calc(50% - 50vw); margin-right: calc(50% - 50dvw);
   min-height: 100vh;
-  background: #000 url("https://homologa.ba.gov.br/comunicacao/sites/site-comunicacao/files/2025-10/bg.jpg") center top / cover no-repeat;
+  background: #000 url("https://www.ba.gov.br/comunicacao/sites/site-comunicacao/files/2025-10/bg.jpg") center top / cover no-repeat;
   font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
