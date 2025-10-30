@@ -1,0 +1,7 @@
+        <li class="govba-bpf-ql-li" role="listitem">
+          <a class="govba-bpf-ql-item" href="#" aria-label="Ouvidoria">
+            <span class="govba-bpf-ql-thumb"><img src="https://www.ba.gov.br/assets/img/chat.png" alt="Ouvidoria"></span>
+            <span class="govba-bpf-ql-text">Ouvidoria</span>
+          </a>
+        </li>
+        <li class="govba-bpf-ql-li" role="listitem">
